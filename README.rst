@@ -28,13 +28,13 @@ Usage
 -----
 
 Simply enhance the ``flake8`` command with the ``--snippet`` setting and add
-a comma-separated list::
+a comma-separated list:
 
 .. code-block:: bash
 
     flake8 --statistics --snippets='# TODO' .
 
-or::
+or:
 
 .. code-block:: bash
 
