@@ -27,6 +27,19 @@ To get the latest commit from GitHub
 Usage
 -----
 
+Simply enhance the ``flake8`` command with the ``--snippet`` setting and add
+a comma-separated list::
+
+.. code-block:: bash
+
+    flake8 --statistics --snippets='# TODO' .
+
+or::
+
+.. code-block:: bash
+
+    flake8 --statistics --snippets='import ipdb,ipdb.set_trace()' .
+
 
 Contribute
 ----------
@@ -39,7 +52,6 @@ If you want to contribute to this project, please perform the following steps
     # Clone your fork
     $ mkvirtualenv -p python2.7 flake8-snippets
     $ python setup.py install
-    $ pip install -r test_requirements.txt
 
     $ git co -b feature_branch master
     # Implement your feature and tests
