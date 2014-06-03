@@ -1,0 +1,9 @@
+include AUTHORS
+include LICENSE
+include DESCRIPTION
+include CHANGELOG.txt
+include README.md
+graft flake8_snippets
+global-exclude *.orig *.pyc *.log *.swp
+prune flake8_snippets/tests/coverage
+prune flake8_snippets/.ropeproject
