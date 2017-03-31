@@ -58,5 +58,6 @@ setup(
     },
     install_requires=[
         'flake8',
+        'flake8-polyfill',
     ],
 )
