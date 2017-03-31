@@ -3,6 +3,8 @@ import pep8
 import re
 import sys
 
+from flake8_polyfill import options
+
 from . import __version__
 
 
@@ -30,9 +32,10 @@ class Flake8Snippets(object):
 
     @classmethod
     def add_options(cls, parser):
-        parser.add_option('--snippets', default='', metavar='patterns',
-                          help="Comma separated code snippets to find")
-        parser.config_options.append('snippets')
+        options.register(
+            parser, '--snippets', default='', metavar='patterns',
+            parse_from_config=True,
+            help="Comma separated code snippets to find")
 
     @classmethod
     def parse_options(cls, options):
